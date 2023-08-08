@@ -5,21 +5,28 @@ import Typewriter from 'typewriter-effect'
 
 const HomePage = () => {
   const textsToType = [
-    "develope Web And Native Apps...",
+    "develop Web And Native Apps...",
     "bringing back UIs into life...",
-    "captures reality in form of pixels...",
+    "captures reality into pixels...",
     // Add more strings as needed
   ];
   
   return (
-    <div className="home-container-wrapper w-full h-[calc(100vh-128px)] flex justify-center items-center pb-32 ">
-      <div className="home-container  flex  justify-center items-center ">
+    <div className="home-container-wrapper z-20 w-full h-[calc(100vh-8rem)] flex justify-center items-center ">
+      
+      <div className="home-container  flex  justify-center items-center pb-32 box-border ">
         <div className="main-hero-wrapper min-h-fit flex flex-col items-center content-center">
-          <div className="user-avatar animate-bounce delay-800 ">
-            <img src={Avatar} width={200} height={200} alt="user-avatar" />
+          <div className="user-avatar h-40">
+            <img
+              src={Avatar}
+              width={200}
+              height={200}
+              alt="user-avatar"
+              className="user-avatar-img  scale-[250%] md:scale-155 delay-400"
+            />
           </div>
-          <div className="shadow animate-pulse w-36 h-6 rounded-[50%] bg-gray-400 flex blur-lg mb-4"></div>
-          <div className="home-content-wrapper flex flex-col place-items-center gap-y-2">
+          <div className="shadow animate-pulse w-36 h-6 rounded-[50%] bg-gray-400 flex blur-lg "></div>
+          <div className="home-content-wrapper flex flex-col place-items-center gap-y-2 mt-6">
             <div className="home-content-container text-blue-600 font-bold text-4xl font-beta text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-700 via-fuchsia-600 to-orange-500 ">
               Hello, I'm<span className="font-beta">&nbsp;Abhinav</span>
             </div>
@@ -35,15 +42,15 @@ const HomePage = () => {
             <div className="desc text-md capitalize font-alpha  font-semibold text-gray-500">
               Code Artsian | ShutterBug
             </div>
-            <div className="type-writter my-2 flex gap-x-2 text-center text-gray-600 font-sigma font-semibold text-sm leading-1 md:text-lg">
+            <div className="type-writter my-2 flex gap-x-2 text-center text-gray-800 font-sigma font-semibold text-sm leading-1 md:text-lg">
               I love to{" "}
               <Typewriter
-               options={{
-                strings:textsToType,
-                loop:true,
-                autoStart:true,
-                deleteSpeed:100,
-               }}
+                options={{
+                  strings: textsToType,
+                  loop: true,
+                  autoStart: true,
+                  deleteSpeed: 100,
+                }}
               />
             </div>
           </div>
