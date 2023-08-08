@@ -9,12 +9,12 @@ const NavBar = () => {
   const navigate =useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <div className="navbar-container w-full  flex justify-between items-center px-12 py-4">
-      <div className="nav-brand-logo" onClick={()=>{navigate("/")}}>
+    <div className="navbar-container w-full  flex justify-between items-center px-6 py-2 md:px-12 md:py-4">
+      <div className="nav-brand-logo flex items-center" onClick={()=>{navigate("/")}}>
         <img src={Logo} alt="brand-logo" width={100} height={100}  />
       </div>
         {isMenuOpen && (
-          <div className="nav-menu-expansion w-[50%] md:w-[30%] bottom-0 h-12 rounded-lg backdrop-blur-2xl flex  justify-between items-center p-2 bg-black/40">
+          <div className="nav-menu-expansion transform rotate-90 translate-x-[36vw] translate-y-40 md:rotate-0 md:translate-x-0 md:translate-y-0 w-[220px] md:w-[30%] bottom-0  h-12 rounded-lg backdrop-blur-2xl flex  justify-between items-center p-2 px-4 bg-black/40">
               <div className="social-icon">
                 <FaLinkedin color={"#FFEAEE"} size={36} />
               </div>

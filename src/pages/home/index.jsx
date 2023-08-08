@@ -8,12 +8,11 @@ const HomePage = () => {
     "develope Web And Native Apps...",
     "bringing back UIs into life...",
     "captures reality in form of pixels...",
-    "The loop continues with this string...",
     // Add more strings as needed
   ];
   
   return (
-    <div className="home-container-wrapper w-full max-h-[100vh] flex justify-center items-center ">
+    <div className="home-container-wrapper w-full h-screen flex justify-center items-center ">
       <div className="home-container  flex  justify-center items-center ">
         <div className="main-hero-wrapper min-h-fit flex flex-col items-center content-center">
           <div className="user-avatar animate-bounce delay-800 ">
