@@ -5,14 +5,13 @@ import Typewriter from 'typewriter-effect'
 
 const HomePage = () => {
   const textsToType = [
-    " to develope Web And Native Apps.",
-    " bringing back pixel perfect UIs into life.",
-    "to captures reality in form of pixels.",
-    "The loop continues with this string.",
+    "develope Web And Native Apps...",
+    "bringing back UIs into life...",
+    "captures reality in form of pixels...",
+    "The loop continues with this string...",
     // Add more strings as needed
   ];
-  const typingSpeed = 150; // Adjust the speed as per your preference
-  const repeatInterval = 2000; // Repeat the effect every 5 seconds (adjust as needed)
+  
   return (
     <div className="home-container-wrapper w-full max-h-[100vh] flex justify-center items-center ">
       <div className="home-container  flex  justify-center items-center ">
@@ -25,19 +24,19 @@ const HomePage = () => {
             <div className="home-content-container text-blue-600 font-bold text-4xl font-beta text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-700 via-fuchsia-600 to-orange-500 ">
               Hello, I'm<span className="font-beta">&nbsp;Abhinav</span>
             </div>
-            <div className="belief-quote text-md  font-semibold font-alpha text-sm text-gray-600 uppercase">
+            <div className="belief-quote text-md  font-semibold font-alpha text-sm text-gray-700 uppercase">
               ।। नमस्कुरोति यं नित्यं महेशं भक्त सदः ।।
             </div>
-            <div className="role-and-tech text-md capitalize">
+            <div className="role-and-tech text-lg font-semibold text-gray-600 capitalize">
               Frontend Engineer |{" "}
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-700 via-fuchsia-600 to-orange-500 ">
                 Next JS
               </span>
             </div>
-            <div className="desc text-sm capitalize">
+            <div className="desc text-md capitalize font-alpha  font-semibold text-gray-500">
               Code Artsian | ShutterBug
             </div>
-            <div className="type-writter flex gap-x-2 text-center font-normal text-xl">
+            <div className="type-writter my-2 flex gap-x-2 text-center text-gray-600 font-sigma font-semibold text-sm leading-1 md:text-lg">
               I love to{" "}
               <Typewriter
                options={{
