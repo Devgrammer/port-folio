@@ -12,7 +12,7 @@ const HomePage = () => {
   ];
   
   return (
-    <div className="home-container-wrapper w-full h-screen flex justify-center items-center ">
+    <div className="home-container-wrapper w-full h-[calc(100vh-128px)] flex justify-center items-center pb-32 ">
       <div className="home-container  flex  justify-center items-center ">
         <div className="main-hero-wrapper min-h-fit flex flex-col items-center content-center">
           <div className="user-avatar animate-bounce delay-800 ">

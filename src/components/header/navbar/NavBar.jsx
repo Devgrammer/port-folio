@@ -9,7 +9,7 @@ const NavBar = () => {
   const navigate =useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <div className="navbar-container w-full  flex justify-between items-center px-6 py-2 md:px-12 md:py-4">
+    <div className="navbar-container w-full h-32 flex justify-between items-center px-6 py-2 md:px-12 md:py-4">
       <div className="nav-brand-logo flex items-center" onClick={()=>{navigate("/")}}>
         <img src={Logo} alt="brand-logo" width={100} height={100}  />
       </div>
