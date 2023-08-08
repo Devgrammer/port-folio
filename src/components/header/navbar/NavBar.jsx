@@ -9,20 +9,20 @@ const NavBar = () => {
   const navigate =useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <div className="navbar-container w-full  flex justify-between items-center">
+    <div className="navbar-container w-full  flex justify-between items-center px-12 py-4">
       <div className="nav-brand-logo" onClick={()=>{navigate("/")}}>
         <img src={Logo} alt="brand-logo" width={100} height={100}  />
       </div>
         {isMenuOpen && (
-          <div className="nav-menu-expansion w-[50%] bottom-0 h-16 rounded-lg backdrop-blur-2xl flex  justify-between items-center p-4 bg-black/40">
+          <div className="nav-menu-expansion w-[50%] md:w-[30%] bottom-0 h-12 rounded-lg backdrop-blur-2xl flex  justify-between items-center p-2 bg-black/40">
               <div className="social-icon">
-                <FaLinkedin color={"#FFEAEE"} size={48} />
+                <FaLinkedin color={"#FFEAEE"} size={36} />
               </div>
             <div className="social-icon">
-              <FaGithub color={"#FFEAEE"} size={48} />
+              <FaGithub color={"#FFEAEE"} size={36} />
             </div>
             <div className="social-icon">
-              <FaBehance color={"#FFEAEE"} size={48} />
+              <FaBehance color={"#FFEAEE"} size={36} />
             </div>
           </div>
         )}
