@@ -6,7 +6,7 @@ const Layout = ({children}) => {
 
   
   return (
-    <div className="w-full max-h-screen overflow-y-scroll box-border flex flex-col items-center justify-items-between ">
+    <div className="w-full h-screen overflow-y-scroll box-border flex flex-col items-center justify-items-between ">
       <GradientBlur position={"top"} />
       <NavBar />
       <marquee
@@ -17,13 +17,13 @@ const Layout = ({children}) => {
       </marquee>
       <marquee
         direction="left"
-        className=" absolute  top-[35%] z-10 text-6xl font-extrabold text-gray-300"
+        className=" absolute  top-[32%] z-10 text-6xl font-extrabold text-gray-300"
       >
         DECODE
       </marquee>
       <marquee
         direction="right"
-        className=" absolute  top-3/4 z-10 text-6xl font-extrabold text-gray-300"
+        className=" absolute  top-[40%] z-10 text-6xl font-extrabold text-gray-300"
       >
         DEVELOP
       </marquee>
