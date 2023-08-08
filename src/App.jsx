@@ -27,9 +27,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App(props) {
-  console.log(props)
-
+function App() {
   return (
     <Layout>
       <Routes>
