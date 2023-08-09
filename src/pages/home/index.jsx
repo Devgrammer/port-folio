@@ -13,34 +13,34 @@ const HomePage = () => {
   
   return (
     <div className="home-container-wrapper z-20 w-full h-[calc(100vh-8rem)] flex justify-center items-center ">
-      <marquee
-        direction="right"
-        className=" absolute  top-44 z-10 text-6xl font-extrabold text-gray-300"
-      >
-        DISCOVER
-      </marquee>
-      <marquee
-        direction="left"
-        className=" absolute  top-[32%] z-10 text-6xl font-extrabold text-gray-300"
-      >
-        DECODE
-      </marquee>
-      <marquee
-        direction="right"
-        className=" absolute  top-[40%] z-10 text-6xl font-extrabold text-gray-300"
-      >
-        DEVELOP
-      </marquee>
-
       <div className="home-container  flex  justify-center items-center pb-32 box-border ">
         <div className="main-hero-wrapper min-h-fit flex flex-col items-center content-center">
-          <div className="user-avatar h-40">
+          <marquee
+            direction="right"
+            className=" absolute  top-44 z-0 text-6xl font-extrabold text-gray-300"
+          >
+            DISCOVER
+          </marquee>
+          <marquee
+            direction="left"
+            className=" absolute  top-[30%] z-0 text-6xl font-extrabold text-gray-300"
+          >
+            DECODE
+          </marquee>
+          <marquee
+            direction="right"
+            className=" absolute  top-[40%] z-0 text-6xl font-extrabold text-gray-300"
+          >
+            DEVELOP
+          </marquee>
+
+          <div className="user-avatar h-44">
             <img
               src={Avatar}
               width={200}
               height={200}
               alt="user-avatar"
-              className="user-avatar-img  scale-[250%] md:scale-155 delay-400"
+              className="user-avatar-img z-30 scale-[250%] md:scale-155 "
             />
           </div>
           <div className="shadow animate-pulse w-36 h-6 rounded-[50%] bg-gray-400 flex blur-lg "></div>
@@ -60,7 +60,7 @@ const HomePage = () => {
             <div className="desc text-md capitalize font-alpha  font-semibold text-gray-500">
               Code Artsian | ShutterBug
             </div>
-            <div className="type-writter my-2 flex gap-x-2 text-center text-gray-800 font-sigma font-semibold text-sm leading-xl tracking-tighter md:text-lg">
+            <div className="type-writter my-2 flex gap-x-2 text-center text-gray-800 font-sigma font-semibold text-xs leading-xl tracking-tighter md:text-lg">
               I love to{" "}
               <Typewriter
                 options={{
