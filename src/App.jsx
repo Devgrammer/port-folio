@@ -6,6 +6,7 @@ import Projects from "./pages/projects";
 import SayHi from "./pages/sayhi";
 import "./App.css";
 import Layout from "./layout/Layout";
+import "react-tooltip/dist/react-tooltip.css";
 
 
 const router = createBrowserRouter([

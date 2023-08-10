@@ -78,4 +78,11 @@ body {
 }
 
 
+/* Timeline-tooltip */
+.tooltip {
+  max-width: 30vw;
+  white-space: pre-line;
+  z-index: 9999 !important;
+}
+
 

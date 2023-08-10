@@ -5,9 +5,9 @@ import Typewriter from 'typewriter-effect'
 
 const HomePage = () => {
   const textsToType = [
-    "develop Web And Native Apps...",
-    "bringing back UIs into life...",
-    "captures reality into pixels...",
+    "develop Web & Native Apps",
+    "bring back UIs into life",
+    "captures story in pixels",
     // Add more strings as needed
   ];
   
@@ -60,7 +60,7 @@ const HomePage = () => {
             <div className="desc text-md capitalize font-alpha  font-semibold text-gray-500">
               Code Artsian | ShutterBug
             </div>
-            <div className="type-writter my-2 flex gap-x-2 text-center text-gray-800 font-sigma font-semibold text-xs leading-xl tracking-tighter md:text-lg">
+            <div className="type-writter my-2 flex gap-x-2 text-center text-gray-800 font-sigma font-semibold text-sm leading-xl tracking-tighter md:text-lg">
               I love to{" "}
               <Typewriter
                 options={{
