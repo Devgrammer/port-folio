@@ -3,6 +3,7 @@ import { SiAdobephotoshop, SiAdobeillustrator, SiNotion } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandVscode } from "react-icons/tb";
+import Timeline from "../../components/timeline/Timeline";
 
 const WhoAmI = () => {
   const devSkills = [
@@ -94,6 +95,9 @@ const WhoAmI = () => {
             </div>
           </div>
         </div>
+        <div className="skill-type text-4xl font-bold">Timeline</div>
+
+        <Timeline />
       </div>
     </div>
   );
