@@ -9,7 +9,7 @@ const Layout = ({children}) => {
     <div className="w-full h-screen overflow-y-scroll box-border flex flex-col items-center justify-between ">
       <GradientBlur position={"top"} />
       <NavBar />
-      <div className="main-content-area-container px-4 box-border">{children}</div>
+      <div className="main-content-area-container px-0 md:px-4">{children}</div>
       <Footer />
       <GradientBlur position={"bottom"} />
     </div>

@@ -30,7 +30,7 @@ const WhoAmI = () => {
   let textGradient =
     "text-transparent font-semibold text-justify bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-fuchsia-600 via-orange-600";
   return (
-    <div className="who-am-i-container flex flex-col w-full gap-y-8 pb-72">
+    <div className="who-am-i-container flex flex-col px-4 w-full gap-y-8 pb-72">
       <div
         className="who-am-i-container-hero flex w-full h-64 rounded-lg box-sizing bg-red-400 bg-cover bg-center bg-no-repeat saturate-0 backdrop-blur-lg drop-shadow-lg"
         style={{
@@ -40,7 +40,7 @@ const WhoAmI = () => {
 
       <div className="who-am-i-content-sub-container">
         <div className="user-intro-desc text-xl font-beta break-normal text-justify">
-          <span className="text-2xl font-semibold text-gray-600">N</span>amaste,
+          <span className="text-2xl font-normal text-slate-600">N</span>amaste,
           I'm <span className={`${textGradient}`}>Abhinav Deep Rastogi</span>. A
           Frontend Engineer with two year of experience, I am proficient
           in&nbsp;
@@ -95,7 +95,7 @@ const WhoAmI = () => {
             </div>
           </div>
         </div>
-        <div className="skill-type text-4xl font-bold">Timeline</div>
+        <div className="skill-type text-6xl font-bold font-zitta ">Timeline</div>
 
         <Timeline />
       </div>
