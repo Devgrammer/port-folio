@@ -29,19 +29,35 @@ const NavBar = () => {
       {isMenuOpen && (
         <animated.div
           className="nav-menu-expansion transform shadow-lg shadow-green-600/20 rotate-90 w-[280px] translate-x-[36vw] translate-y-40 md:rotate-0 md:translate-x-0 md:translate-y-0   md:w-[30%] bottom-0  h-10  rounded-full backdrop-blur-2xl flex  justify-between items-center p-2 px-4 bg-black  hover:md:w-[35%] hover:cursor-pointer  duration-500 ease-in-out "
-          onMouseEnter={() => { setSong(ClockSound); play()}}
+          onMouseEnter={() => {
+            setSong(ClockSound);
+            play();
+          }}
           onMouseLeave={() => stop()}
         >
           <RealTimeClock />
-          <div className="separator text-gray-500 font-semibold">|</div>
+          <div className="separator text-gray-500 font-semibold mx-0 mr-0 md:mx-1 md:mr-4">|</div>
           <div className="social-link-icon-wrapper flex justify-between w-1/2">
-            <div className="social-icon ">
+            <div
+              className="social-icon "
+              onClick={() => window.open("https://github.com/Devgrammer")}
+            >
               <FaGithub color={"#00e05e"} size={20} />
             </div>
-            <div className="social-icon">
+            <div
+              className="social-icon"
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/iamcrazyabhi/")
+              }
+            >
               <FaLinkedin color={"#00e05e"} size={20} />
             </div>
-            <div className="social-icon">
+            <div
+              className="social-icon"
+              onClick={() =>
+                window.open("https://www.behance.net/iamcrazyabhi")
+              }
+            >
               <FaBehance color={"#00e05e"} size={20} />
             </div>
           </div>
@@ -51,7 +67,13 @@ const NavBar = () => {
         className="nav-ham-burger w-fit"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <button className="ham-burger h-24 " onClick={()=>{setSong(ClickSound); play();}}>
+        <button
+          className="ham-burger h-24 "
+          onClick={() => {
+            setSong(ClickSound);
+            play();
+          }}
+        >
           {isMenuOpen ? (
             <PiHamburgerBold size={32} />
           ) : (

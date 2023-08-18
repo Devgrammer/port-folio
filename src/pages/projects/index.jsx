@@ -22,6 +22,7 @@ const Projects = () => {
               url={val?.url}
               desc={val?.desc}
               repo={val?.repo}
+              path={val?.img_path}
             />
           );
         })}
@@ -43,7 +44,7 @@ const Projects = () => {
 
 export default Projects;
 
-const ProjectCard = ({ id, index, name, url, desc,repo }) => {
+const ProjectCard = ({ id, index, name, url, desc,repo, path }) => {
 
   const [isDesc, setIsDesc] = useState(false);
   const generateRandomHeight = () => {
@@ -78,19 +79,24 @@ function generateRandomColor() {
       className={`project-card-container bg-white border border-slate-400 rounded-xl min-w-100 md:min-w-[300px]  p-4  flex flex-col gap-y-2`}
       // onMouseEnter={() => setIsDesc(true)}
       // onMouseLeave={() => setIsDesc(false)}
-      
+
       style={{ height: `${randomHeight}` }}
     >
       <div
         className="art-container  rounded-lg w-full h-3/4 duration-600 hover:h-[250px] duration-700 "
         style={{ backgroundColor: `${colors}` }}
         onClick={() => {
-        window.open(`${url}`);
-      }}
+          window.open(`${url}`);
+        }}
       >
         <div className="artwork-container    w-full ">
           {" "}
-          <img src={PR1} width={`100%`} height={`100%`} />
+          <img
+            src={window.location.origin + `${path?.length>0?path:"/project/pr1.png"}`}
+            className="w-[75%] rotate-[340deg] translate-x-8 translate-y-12 hover:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
+            width={`100%`}
+            height={`100%`}
+          />
         </div>
       </div>
 
@@ -102,14 +108,22 @@ function generateRandomColor() {
           <div className="pills-category flex text-sm text-slate-600 font-semibold font-alpha uppercase max-w-fit  px-2 box-border max-h-fit justify-center items-center font-regular rounded-full border border-slate-400">
             Web
           </div>
-          
-          <div className="pills-category  absolute top-0 right-0 flex text-sm text-slate-600 font-semibold font-alpha uppercase max-w-4  px-2 box-border max-h-4 justify-center items-center font-regular" onClick={()=>{window.open(`${repo}`)}} >
-            <FaGithub size={24} className="hover:text-green-700 hover:cursor-pointer"/>
+
+          <div
+            className="pills-category  absolute top-0 right-0 flex text-sm text-slate-600 font-semibold font-alpha uppercase max-w-4  px-2 box-border max-h-4 justify-center items-center font-regular"
+            onClick={() => {
+              window.open(`${repo}`);
+            }}
+          >
+            <FaGithub
+              size={24}
+              className="hover:text-green-700 hover:cursor-pointer"
+            />
           </div>
         </div>
         {isDesc && (
           <div className="desc font-alpha text-[11px] font-semibold  text-slate-700 py-1">
-            {desc?.length>0 && desc?.substring(0, 10)}
+            {desc?.length > 0 && desc?.substring(0, 10)}
           </div>
         )}
       </div>
