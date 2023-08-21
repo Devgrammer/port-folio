@@ -7,8 +7,8 @@ const Loader = () => {
     <div className='w-full h-screen relative flex  flex-col justify-center items-center  '>
     <GradientBlur position={'top'}/>
       <div className="loader transform animate-pulse"></div>
-      <img src={Avatar} alt="brand-logo" width={180} height={180} className='absolute  top-[calc(34%)] filter:invert(90%)' />
-      <img src={Logo} alt="brand-logo" width={120} height={120} className='absolute  animate-pulse duration-[3000ms] top-[calc(54%)] filter:invert(90%)' />
+      <img src={Avatar} alt="brand-logo"  className='absolute w-[150px] h-[150px] md:w-[180px] md:h-[180px] top-[36%] md:top-[calc(34%)] filter:invert(90%)' />
+      <img src={Logo} alt="brand-logo"  className='absolute w-[80px]  h-[80px] animate-pulse duration-[3000ms] top-[54%] md:top-[calc(60%)] filter:invert(90%)' />
       <GradientBlur position={'bottom'}/>
     </div>
   );

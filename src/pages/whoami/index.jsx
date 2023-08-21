@@ -1,11 +1,21 @@
 import React from "react";
 import { SiAdobephotoshop, SiAdobeillustrator, SiNotion } from "react-icons/si";
-import { FaGithubSquare } from "react-icons/fa";
+import { LiaFileDownloadSolid } from "react-icons/lia";
+import { FaGithubSquare, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FiPenTool} from "react-icons/fi";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandVscode } from "react-icons/tb";
 import Timeline from "../../components/timeline/Timeline";
+import { Page, Text, View, Document, StyleSheet,PDFViewer,PDFDownloadLink  } from "@react-pdf/renderer";
+import Resume from '/pdf/resume.pdf'
 
 const WhoAmI = () => {
+  const dates= new Date().toString();
+  const fileName= `Resume_Abhinav_Deep_Rastogi_${dates?.substring(0,15).replace(/ /g, "_")}`
+  console.log('date', dates?.substring(0,15).replace(/ /g,"_"));
+
+
+
   const devSkills = [
     "react",
     "next",
@@ -95,9 +105,26 @@ const WhoAmI = () => {
             </div>
           </div>
         </div>
-        <div className="skill-type text-6xl font-bold font-zitta ">Timeline</div>
+        <div className="skill-type text-6xl font-bold font-zitta ">
+          Timeline
+        </div>
 
         <Timeline />
+
+        <div className="pdf-drawer mt-8 w-full flex justify-center">
+          <a
+            href={Resume}
+            download={fileName}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button title="Click to download the resume." className=" flex gap-x-2  items-center w-fit p-2 px-4 shadow-lg rounded-md border border-gray-800 hover:bg-gradient-to-r font-semibold from-cyan-500 via-blue-500 via-fuchsia-500 to-orange-500 hover:text-white  hover:shadow-2xl hover:scale-110 duration-700 "><LiaFileDownloadSolid size={24}/> Download Resume</button>
+          </a>
+        </div>
+<div className="quote-section flex flex-col w-full justify-center items-center gap-y-2">
+        <div className=" font-semibold text-xl text-slate-600 w-fit flex items-start justify-center"><span className="font-mono hidden md:block"><FaQuoteLeft size={16}/></span> &nbsp;Talk to yourself once in a day, otherwise you may miss meeting an intelligent person in this world.&nbsp;<span className="font-mono hidden md:block"><FaQuoteRight size={16}/></span></div>
+        <div className="text-slate-600 font-sigma italic flex gap-x-1 items-end items-center text-xs md:text-sm"><FiPenTool size={12} className="rotate-[-90deg]"/>Narendranath Datta aka Swami Vivekanand </div>
+        </div>
       </div>
     </div>
   );
