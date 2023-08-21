@@ -1,5 +1,3 @@
-import { random } from "maath";
-import PR1 from "../../assets/pr1.png";
 import  {ProjectData}  from "../../data/projectData/ProjectData.jsx";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
@@ -89,13 +87,12 @@ function generateRandomColor() {
           window.open(`${url}`);
         }}
       >
-        <div className="artwork-container    w-full ">
+        <div className="artwork-container    w-full  box-border">
           {" "}
           <img
             src={window.location.origin + `${path?.length>0?path:"/project/pr1.png"}`}
-            className="w-[75%] rotate-[340deg] translate-x-8 translate-y-12 hover:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
-            width={`100%`}
-            height={`100%`}
+            className="rotate-0 max-w-20 md:w-[75%] md:rotate-[340deg] translate-x-8 translate-y-12 hover:md:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
+           
           />
         </div>
       </div>
