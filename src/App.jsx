@@ -1,43 +1,35 @@
-import { useState } from "react";
-import {  createBrowserRouter, Route, Router, RouterProvider, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Loader from './components/loader/Loader'
+import "react-tooltip/dist/react-tooltip.css";
+import Projects from "./pages/projects";
+import Layout from "./layout/Layout";
 import HomePage from "./pages/home";
 import WhoAmI from "./pages/whoami";
-import Projects from "./pages/projects";
 import SayHi from "./pages/sayhi";
 import "./App.css";
-import Layout from "./layout/Layout";
-import "react-tooltip/dist/react-tooltip.css";
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: HomePage,
-  },
-  {
-    path: "/whoami",
-    Component: WhoAmI,
-  },
-  {
-    path: "/sayhi",
-    Component: SayHi,
-  },
-  {
-    path: "/projects",
-    Component: Projects,
-  },
-]);
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+setIsLoading(false);
+    }, 5000)
+  },[]); 
+
   return (
-    <Layout>
+   <>{
+   isLoading? <Loader/> : (<Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/whoami" element={<WhoAmI />} />
         <Route path="/sayhi" element={<SayHi />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
-    </Layout>
+    </Layout>)}
+  </>
   );
 }
 

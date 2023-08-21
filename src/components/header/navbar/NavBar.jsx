@@ -3,7 +3,7 @@
 import Logo from '../../../assets/pngegg.png'
  import { FaBehance, FaGithub, FaHamburger, FaLinkedin } from "react-icons/fa";
  import { PiHamburgerBold } from "react-icons/pi";
-import { BrowserRouter, Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import RealTimeClock from '../../clock/Clock';
 import { animated } from "@react-spring/web";
 import useSound from "use-sound";
