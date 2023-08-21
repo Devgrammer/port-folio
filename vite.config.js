@@ -1,13 +1,17 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react'
+
+import react from '@vitejs/plugin-react';
+
 import { VitePWA } from 'vite-plugin-pwa';
 
 const manifestForPlugin = {
   registerType: 'prompt',
   includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
   manifest: {
+
     name: 'Abhinav d. Rastogi',
     short_name: 'Abhinav d. Rastogi',
+
     description: 'An app that can show weather forecast for your city.',
     icons: [
       {
