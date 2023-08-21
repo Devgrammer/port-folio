@@ -47,9 +47,9 @@ function RealTimeClock() {
   };
 
   return (
-    <div className="date-time-section text-green-500  w-[80px] md:w-2/5 text-xs  flex flex-col md:flex-row justify-center items-center  gap-0 md:gap-2">
-            <div className='text-[8px] md:text-[11px] w-18 font-semibold'>{formatAMPM(dateTime)}</div>
-             <span className="text-[10px] md:text-[12px] font-bold">{formatDate(dateTime)}</span>
+    <div className="date-time-section text-green-500  w-[80px] md:w-2/4 text-xs  flex flex-col md:flex-row justify-center items-center  gap-0 md:gap-2">
+            <div className='text-[8px] md:text-[11px] w-20 font-semibold'>{formatAMPM(dateTime)}</div>
+             <span className="text-[10px] md:text-[12px]  font-bold">{formatDate(dateTime)}</span>
     </div>
     
   );

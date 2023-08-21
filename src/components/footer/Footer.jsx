@@ -7,8 +7,9 @@ const Footer = () => {
   const navigate = useNavigate();
     let text_gradient ="text-gray-900";
   return (
-    <>
+
       <div className="footer-menu w-[90%] fixed bottom-6 h-24 box-border rounded-lg backdrop-blur-2xl shadow-md  flex z-30 justify-between items-center p-2 pb-4 bg-black/10  hover:cursor-pointer">
+
         <div
           className="footer-menu-icon flex max-h-14 flex-col items-center  justify-center box-border gap-y-6"
           onClick={() => navigate("/whoami")}
