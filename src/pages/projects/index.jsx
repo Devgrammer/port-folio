@@ -1,6 +1,7 @@
 import { ProjectData } from "../../data/projectData/ProjectData.jsx";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import Particles from "../../components/particle/Particle.jsx";
 
 const Projects = () => {
   return (
@@ -126,6 +127,7 @@ const ProjectCard = ({ id, index, name, url, desc, repo, path }) => {
           </div>
         )}
       </div>
+      <Particles/>
     </div>
   );
 };
