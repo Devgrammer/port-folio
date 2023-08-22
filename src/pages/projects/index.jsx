@@ -4,10 +4,10 @@ import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <div className="project-main-contianer font-zitta flex flex-col justify-center items-center w-screen h-screen pt-10 pb-32">
-      <div className="project-section-header relative text-6xl md:text-[8rem] text-slate-700 font-semibold mb-4 md:mb-0">
+    <div className="project-main-contianer font-zitta flex flex-col justify-center items-center w-screen h-screen pt-4 md:pt-10 pb-32">
+      <div className="project-section-header relative text-5xl md:text-[8rem] text-slate-700 font-semibold mb-2 md:mb-0">
         THE PROJECTS{" "}
-        <span className=" text-3xl md:text-6xl absolute bottom-2/5 font-bold">{`{${ProjectData.length-1}}`}</span>
+        <span className=" text-2xl md:text-6xl absolute bottom-2/5 font-bold">{`{${ProjectData.length-1}}`}</span>
       </div>
       <div className="project-card-container box-border flex flex-col gap-y-8 md:flex-row  w-[90%] md:w-[100%]  justify-start items-center md:items-start md:justify-start overflow-x-scroll h-[64rem]">
         {ProjectData.map(( val, index ) => {
@@ -81,7 +81,7 @@ function generateRandomColor() {
       style={{ height: `${randomHeight}` }}
     >
       <div
-        className="art-container  rounded-lg w-full h-3/4 duration-600 hover:h-[250px] duration-700 "
+        className="art-container  rounded-lg w-full h-[200px] md:h-3/4 duration-600 hover:h-[210px] hover:md:h-[250px] duration-700 "
         style={{ backgroundColor: `${colors}` }}
         onClick={() => {
           window.open(`${url}`);
@@ -91,7 +91,7 @@ function generateRandomColor() {
           {" "}
           <img
             src={window.location.origin + `${path?.length>0?path:"/project/pr1.png"}`}
-            className="rotate-0 max-w-20 md:w-[75%] md:rotate-[340deg] translate-x-8 translate-y-12 hover:md:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
+            className="rotate-0 w-[80%] md:w-[75%] rotate-0 md:rotate-[340deg] translate-x-7 translate-y-6 md:translate-x-8 md:translate-y-12 hover:md:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
            
           />
         </div>

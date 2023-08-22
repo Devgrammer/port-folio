@@ -76,7 +76,7 @@ const SayHi = () => {
 
       <div className="calendly-container h-14 mt-4" id="calendly">
         <button
-          className="bg-white/50 backdrop-blur-xl shadow-md  w-64  p-2 box-boder rounded-full justify-center items-center text-black uppercase text-md font-beta font-semibold hover:border-2 hover:border-black hover:scale-110 duration-700"
+          className="bg-white/50 backdrop-blur-xl shadow-md  w-64  p-2 box-boder rounded-full justify-center items-center text-black uppercase text-md font-beta font-semibold hover:border-2 hover:border-black hover:scale-110 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white duration-700"
           onClick={() => setIsOpen(!isOpen)}
         >
           Book a calendly !
@@ -102,7 +102,7 @@ const SayHi = () => {
           <a href="mailto: rastogi.abhinav8@gmail.com">
             <input
               type="email"
-              className="bg-white p-2 px-4 rounded-lg font-semibold text-slate-500 text-beta"
+              className="bg-white p-2 px-4  w-64 rounded-lg font-semibold text-slate-500 text-beta"
               value="rastogi.abhinav8@gmail.com"
             />
           </a>
@@ -112,26 +112,26 @@ const SayHi = () => {
           <div className="mail content text-sm font-bold text-slate-800 uppercase my-2">
             Follow me on{" "}
           </div>
-          <div className="social-link-icon-wrapper flex justify-center w-full gap-x-4">
+          <div className="social-link-icon-wrapper flex justify-center w-full gap-x-8">
             <div
               className="social-icon "
-              onClick={() => window.open("https://www.google.com", "_blank")}
+              onClick={() => window.open("https://github.com/Devgrammer", "_blank")}
             >
               <FaGithub
-                size={40}
+                size={36}
                 className="text-gray-400 hover:text-cyan-500 hover:cursor-pointer hover:shadow-lg duration-700"
               />
             </div>
 
-            <div className="social-icon">
+            <div className="social-icon" onClick={()=>window.open("https://www.linkedin.com/in/iamcrazyabhi/", "_blank")}>
               <FaLinkedin
-                size={40}
+                size={36}
                 className="text-gray-400 hover:text-cyan-500 hover:cursor-pointer duration-700"
               />
             </div>
-            <div className="social-icon">
+            <div className="social-icon" onClick={()=>window.open("https://www.behance.net/iamcrazyabhi", "_blank")}>
               <FaBehance
-                size={40}
+                size={36}
                 className="text-gray-400 hover:text-cyan-500 hover:cursor-pointer duration-700"
               />
             </div>
