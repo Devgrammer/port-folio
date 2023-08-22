@@ -6,6 +6,7 @@ import { FiPenTool} from "react-icons/fi";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandVscode } from "react-icons/tb";
 import Timeline from "../../components/timeline/Timeline";
+import Profile from '../../assets/avatar.png'
 import { Page, Text, View, Document, StyleSheet,PDFViewer,PDFDownloadLink  } from "@react-pdf/renderer";
 import Resume from '/pdf/resume.pdf'
 
@@ -40,15 +41,31 @@ const WhoAmI = () => {
   let textGradient =
     "text-transparent font-semibold text-justify bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-fuchsia-600 via-orange-600";
   return (
-    <div className="who-am-i-container flex flex-col px-4 w-full gap-y-8 pb-72">
+    <div className="who-am-i-container flex flex-col px-4 w-full gap-y-8 pb-72 pt-16">
       <div
-        className="who-am-i-container-hero flex w-full h-64 rounded-lg box-sizing bg-red-400 bg-cover bg-center bg-no-repeat saturate-0 backdrop-blur-lg drop-shadow-lg"
+        className="who-am-i-container-hero flex w-full h-64 rounded-lg box-sizing border-8  border-white bg-center bg-start bg-no-repeat  backdrop-blur-lg "
         style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)`,
+          backgroundImage: `url(/project/cover1.png)`,
         }}
-      ></div>
+      >
+        <div className="avatar-container absolute top-20">
+          <img
+            className="avatar-img bg-transparent w-80 h-80 flex bg-center bg-no-repeat z-30"
+            src={`/project/blob.svg`}
+          />
+          <div className="con-circle z-40 absolute top-20 left-[5.5rem] border-t-2 border-l-2 border-r-2 w-36 h-36 border-slate-200 rounded-full"></div>
+          <div className="con-circle z-40 absolute top-[6rem] left-[6.5rem] border-t-2 border-l-2 border-r-2 w-28 h-28  border-slate-300 rounded-full"></div>
+          <div className="con-circle z-40 absolute top-[7rem] left-[7.5rem]  w-20 h-20 bg-cyan-400 rounded-full shadow-lg">
+            <img
+              src={Profile}
+              alt="profile picture"
+              className="scale-115 motion-reduce:animate-bounce infinite duration-700"
+            />
+          </div>
+        </div>
+      </div>
 
-      <div className="who-am-i-content-sub-container">
+      <div className="who-am-i-content-sub-container mt-24 mb-10">
         <div className="user-intro-desc text-xl font-beta break-normal text-justify">
           <span className="text-2xl font-normal text-slate-600">N</span>amaste,
           I'm <span className={`${textGradient}`}>Abhinav Deep Rastogi</span>. A
@@ -113,12 +130,29 @@ const WhoAmI = () => {
 
         <div className="pdf-drawer mt-8 w-full flex justify-center">
           <a href={Resume} download={fileName} target="_blank" rel="noreferrer">
-            <button title="Click to download the resume." className=" flex gap-x-2  items-center w-fit p-2 px-4 shadow-lg rounded-md border border-gray-800 hover:bg-gradient-to-r font-semibold from-cyan-500 via-blue-500 via-fuchsia-500 to-orange-500 hover:text-white  hover:shadow-2xl hover:scale-110 duration-700 "><LiaFileDownloadSolid size={24}/> Download Resume</button>
+            <button
+              title="Click to download the resume."
+              className=" flex gap-x-2  items-center w-fit p-2 px-4 shadow-lg rounded-md border border-gray-800 hover:bg-gradient-to-r font-semibold from-cyan-500 via-blue-500 via-fuchsia-500 to-orange-500 hover:text-white  hover:shadow-2xl hover:scale-110 duration-700 "
+            >
+              <LiaFileDownloadSolid size={24} /> Download Resume
+            </button>
           </a>
         </div>
-<div className="quote-section flex flex-col w-full justify-center items-center gap-y-2">
-        <div className=" font-semibold text-xl text-slate-600 w-fit flex items-start justify-center"><span className="font-mono hidden md:block"><FaQuoteLeft size={16}/></span> &nbsp;Talk to yourself once in a day, otherwise you may miss meeting an intelligent person in this world.&nbsp;<span className="font-mono hidden md:block"><FaQuoteRight size={16}/></span></div>
-        <div className="text-slate-600 font-sigma italic flex gap-x-1 items-end items-center text-xs md:text-sm"><FiPenTool size={12} className="rotate-[-90deg]"/>Narendranath Datta aka Swami Vivekanand </div>
+        <div className="quote-section flex flex-col w-full justify-center items-center gap-y-2">
+          <div className=" font-semibold text-xl text-slate-600 w-fit flex items-start justify-center">
+            <span className="font-mono hidden md:block">
+              <FaQuoteLeft size={16} />
+            </span>{" "}
+            &nbsp;Talk to yourself once in a day, otherwise you may miss meeting
+            an intelligent person in this world.&nbsp;
+            <span className="font-mono hidden md:block">
+              <FaQuoteRight size={16} />
+            </span>
+          </div>
+          <div className="text-slate-600 font-sigma italic flex gap-x-1 items-center text-xs md:text-sm">
+            <FiPenTool size={12} className="rotate-[-90deg]" />
+            Narendranath Datta aka Swami Vivekanand{" "}
+          </div>
         </div>
       </div>
     </div>

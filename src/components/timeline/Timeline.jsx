@@ -96,7 +96,7 @@ const TimelineBox = ({ index, role, start, end, location, id, desc, org }) => {
     <div
       className={`timeline-box-container shadow-lg p-2 py-4 absolute ${
         index % 2 === 0 ? "md:right-64" : " md:left-64"
-      } bottom-[-64px] md:bottom-[-56px] border-0 border-gray-700  box-border w-72  md:w-80 h-32 md:h-28 rounded-md bg-white/50 flex items-center backdrop-blur-xl  transform hover:border-2 hover:border-cyan-600 hover:scale-110 duration-700 hover:cursor-pointer`}
+      } bottom-[-64px] md:bottom-[-56px] border-0 border-gray-700  box-border w-[18.5rem]  md:w-80 h-32 md:h-28 rounded-md bg-white/50 flex items-center backdrop-blur-xl  transform hover:border-2 hover:border-cyan-600 hover:scale-110 duration-700 hover:cursor-pointer`}
     >
       <div className="date-part w-1/4 pl-2 pr-4  border-r-2 h-[100%] border-gray-400  flex flex-col justify-center text-sm font-semibold text-gray-600 font-alpha">
         <span className="uppercase">{MonthFomatter(startDate[1])}</span>
