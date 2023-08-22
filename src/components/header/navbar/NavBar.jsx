@@ -40,14 +40,14 @@ const NavBar = () => {
           <div className="social-link-icon-wrapper flex justify-between w-1/2">
             <div
               className="social-icon "
-              onClick={() => window.open("https://github.com/Devgrammer")}
+              onClick={() => window.open("https://github.com/Devgrammer","_blank")}
             >
               <FaGithub color={"#00e05e"} size={20} />
             </div>
             <div
               className="social-icon"
               onClick={() =>
-                window.open("https://www.linkedin.com/in/iamcrazyabhi/")
+                window.open("https://www.linkedin.com/in/iamcrazyabhi/", "_blank")
               }
             >
               <FaLinkedin color={"#00e05e"} size={20} />
@@ -55,7 +55,7 @@ const NavBar = () => {
             <div
               className="social-icon"
               onClick={() =>
-                window.open("https://www.behance.net/iamcrazyabhi")
+                window.open("https://www.behance.net/iamcrazyabhi", "_blank")
               }
             >
               <FaBehance color={"#00e05e"} size={20} />

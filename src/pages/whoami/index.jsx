@@ -112,12 +112,7 @@ const WhoAmI = () => {
         <Timeline />
 
         <div className="pdf-drawer mt-8 w-full flex justify-center">
-          <a
-            href={Resume}
-            download={fileName}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={Resume} download={fileName} target="_blank" rel="noreferrer">
             <button title="Click to download the resume." className=" flex gap-x-2  items-center w-fit p-2 px-4 shadow-lg rounded-md border border-gray-800 hover:bg-gradient-to-r font-semibold from-cyan-500 via-blue-500 via-fuchsia-500 to-orange-500 hover:text-white  hover:shadow-2xl hover:scale-110 duration-700 "><LiaFileDownloadSolid size={24}/> Download Resume</button>
           </a>
         </div>
