@@ -6,6 +6,7 @@ import {
 } from "react-calendly";
 import { FaBehance, FaGithub, FaLinkedin } from "react-icons/fa";
 import { useNavigate, redirect, Link } from "react-router-dom";
+import Particles from "../../components/particle/Particle";
 
 const SayHi = () => {
 
@@ -138,6 +139,7 @@ const SayHi = () => {
           </div>
         </div>
       </div>
+      <Particles/>
     </div>
   );
 };

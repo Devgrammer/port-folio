@@ -9,6 +9,7 @@ import Timeline from "../../components/timeline/Timeline";
 import Profile from '../../assets/avatar.png'
 import { Page, Text, View, Document, StyleSheet,PDFViewer,PDFDownloadLink  } from "@react-pdf/renderer";
 import Resume from '/pdf/resume.pdf'
+import Particles from "../../components/particle/Particle";
 
 const WhoAmI = () => {
   const dates= new Date().toString();
@@ -155,6 +156,7 @@ const WhoAmI = () => {
           </div>
         </div>
       </div>
+      <Particles/>
     </div>
   );
 };
