@@ -1,4 +1,4 @@
-import  {ProjectData}  from "../../data/projectData/ProjectData.jsx";
+import { ProjectData } from "../../data/projectData/ProjectData.jsx";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -7,10 +7,12 @@ const Projects = () => {
     <div className="project-main-contianer font-zitta flex flex-col justify-center items-center w-screen h-screen pt-4 md:pt-10 pb-32">
       <div className="project-section-header relative text-5xl md:text-[8rem] text-slate-700 font-semibold mb-2 md:mb-0">
         THE PROJECTS{" "}
-        <span className=" text-2xl md:text-6xl absolute bottom-2/5 font-bold">{`{${ProjectData.length-1}}`}</span>
+        <span className=" text-2xl md:text-6xl absolute bottom-2/5 font-bold">{`{${
+          ProjectData.length - 1
+        }}`}</span>
       </div>
       <div className="project-card-container box-border flex flex-col gap-y-8 md:flex-row  w-[90%] md:w-[100%]  justify-start items-center md:items-start md:justify-start overflow-x-scroll h-[64rem]">
-        {ProjectData.map(( val, index ) => {
+        {ProjectData.map((val, index) => {
           return (
             <ProjectCard
               key={`project-card-${index}`}
@@ -24,26 +26,24 @@ const Projects = () => {
             />
           );
         })}
-
       </div>
-        <div className="dot-section flex">
-          { 
-            ProjectData.map((val, index)=>{
-              return (
-                <div key={`project-dot-${index}`} className="dot w-2 h-2 rounded-full bg-gray-600 flex"></div>
-              );
-            })
-          }
-        </div>
+      <div className="dot-section flex">
+        {ProjectData.map((val, index) => {
+          return (
+            <div
+              key={`project-dot-${index}`}
+              className="dot w-2 h-2 rounded-full bg-gray-600 flex"
+            ></div>
+          );
+        })}
+      </div>
     </div>
   );
 };
 
-
 export default Projects;
 
-const ProjectCard = ({ id, index, name, url, desc,repo, path }) => {
-
+const ProjectCard = ({ id, index, name, url, desc, repo, path }) => {
   const [isDesc, setIsDesc] = useState(false);
   const generateRandomHeight = () => {
     const minHeight = 20; // in rem
@@ -57,21 +57,21 @@ const ProjectCard = ({ id, index, name, url, desc,repo, path }) => {
     return `${randomHeight}rem`;
   };
 
-function generateRandomColor() {
-  // Example array of hex color codes
-  const colorList = ["#FF5733", "#3498DB", "#E74C3C", "#2ECC71", "#9B59B6"];
+  function generateRandomColor() {
+    // Example array of hex color codes
+    const colorList = ["#FF5733", "#3498DB", "#E74C3C", "#2ECC71", "#9B59B6"];
 
-  // Generate a random index to select a color from the list
-  const randomIndex = Math.floor(Math.random() * colorList.length);
+    // Generate a random index to select a color from the list
+    const randomIndex = Math.floor(Math.random() * colorList.length);
 
-  // Get the color code at the random index
-  const randomColor = colorList[randomIndex];
+    // Get the color code at the random index
+    const randomColor = colorList[randomIndex];
 
-  return randomColor;
-}
+    return randomColor;
+  }
 
-  let colors= generateRandomColor();
-  let randomHeight= generateRandomHeight();
+  let colors = generateRandomColor();
+  let randomHeight = generateRandomHeight();
   return (
     <div
       className={`project-card-container bg-white border border-slate-400 rounded-xl min-w-100 md:min-w-[300px]  p-4  flex flex-col gap-y-2`}
@@ -90,9 +90,11 @@ function generateRandomColor() {
         <div className="artwork-container    w-full  box-border">
           {" "}
           <img
-            src={window.location.origin + `${path?.length>0?path:"/project/pr1.png"}`}
+            src={
+              window.location.origin +
+              `${path?.length > 0 ? path : "/project/pr1.png"}`
+            }
             className="rotate-0 w-[80%] md:w-[75%] rotate-0 md:rotate-[340deg] translate-x-7 translate-y-6 md:translate-x-8 md:translate-y-12 hover:md:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
-           
           />
         </div>
       </div>
