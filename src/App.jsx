@@ -8,6 +8,7 @@ import HomePage from "./pages/home";
 import WhoAmI from "./pages/whoami";
 import SayHi from "./pages/sayhi";
 import "./App.css";
+import PotionLoader from "./components/loader/PotionLoader";
 
 
 function App() {
@@ -21,7 +22,7 @@ setIsLoading(false);
 
   return (
    <>{
-   isLoading? <Loader/> : (<Layout>
+   isLoading ? <PotionLoader/> : (<Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/whoami" element={<WhoAmI />} />

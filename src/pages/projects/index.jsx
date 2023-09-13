@@ -14,17 +14,26 @@ const Projects = () => {
       </div>
       <div className="project-card-container box-border flex flex-col gap-y-8 md:flex-row  w-[90%] md:w-[100%]  justify-start items-center md:items-start md:justify-start overflow-x-scroll h-[64rem]">
         {ProjectData.map((val, index) => {
+          console.log('chk', val?.img_path?.length>0)
           return (
-            <ProjectCard
-              key={`project-card-${index}`}
-              id={val?.id}
-              index={index}
-              name={val?.project_name}
-              url={val?.url}
-              desc={val?.desc}
-              repo={val?.repo}
-              path={val?.img_path}
-            />
+            <>
+              {val?.img_path?.length>0 ? (
+                <ProjectCard
+                  key={`project-card-${index}`}
+                  id={val?.id}
+                  index={index}
+                  name={val?.project_name}
+                  url={val?.url}
+                  desc={val?.desc}
+                  repo={val?.repo}
+                  path={val?.img_path}
+                  />
+              ) : (
+                <ProjectLoaderCard
+                  key={`project-card-${index}`}
+                />
+              )}
+            </>
           );
         })}
       </div>
@@ -95,7 +104,7 @@ const ProjectCard = ({ id, index, name, url, desc, repo, path }) => {
               window.location.origin +
               `${path?.length > 0 ? path : "/project/pr1.png"}`
             }
-            className="rotate-0 w-[80%] md:w-[75%] rotate-0 md:rotate-[340deg] translate-x-7 translate-y-6 md:translate-x-8 md:translate-y-12 hover:md:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
+            className="rotate-0 w-[80%] md:w-[75%]  md:rotate-[340deg] translate-x-7 translate-y-6 md:translate-x-8 md:translate-y-12 hover:md:rotate-0 hover:scale-110 hover:cursor-pointer  duration-[1600ms]"
           />
         </div>
       </div>
@@ -124,6 +133,63 @@ const ProjectCard = ({ id, index, name, url, desc, repo, path }) => {
         {isDesc && (
           <div className="desc font-alpha text-[11px] font-semibold  text-slate-700 py-1">
             {desc?.length > 0 && desc?.substring(0, 10)}
+          </div>
+        )}
+      </div>
+      <Particles/>
+    </div>
+  );
+};
+
+
+const ProjectLoaderCard = () => {
+  
+  const generateRandomHeight = () => {
+    const minHeight = 20; // in rem
+    const maxHeight = 28; // in rem
+
+    // Generate a random height between minHeight and maxHeight
+    const randomHeight =
+      Math.floor(Math.random() * (maxHeight - minHeight + 0.2)) + minHeight;
+
+    // Return the random height with "rem" unit
+    return `${randomHeight}rem`;
+  };
+
+ 
+  let randomHeight = generateRandomHeight();
+  return (
+    <div
+      className={`project-card-container bg-white border border-slate-400 rounded-xl min-w-180 md:min-w-[300px]  p-4  flex flex-col gap-y-2`}
+      // onMouseEnter={() => setIsDesc(true)}
+      // onMouseLeave={() => setIsDesc(false)}
+
+      style={{ height: `${randomHeight}` }}
+    >
+      <div
+        className="art-container motion-safe:animate-pulse rounded-lg w-full h-[200px] md:h-3/4 duration-600 hover:h-[210px] hover:md:h-[250px] duration-700 bg-gray-300 "
+        // style={{ backgroundColor: `${colors}` }}
+        
+      >
+        <div className="artwork-container w-full  box-border">
+        </div>
+      </div>
+
+      <div className="project-card-content-section  flex flex-col w-full ">
+        <div className="project-name uppercase animate-pulse  w-40 h-6 bg-gray-300 ">
+        </div>
+        <div className="pills-section relative top-2  ">
+          <div className="pills-category flex  w-12 h-6  px-2 box-border rounded-full border bg-gray-300 motion-safe:animate-pulse">
+          </div>
+
+          <div
+            className="pills-category  absolute top-0 right-0 flex  w-4  px-2 box-border h-4 rounded-full motion-safe:animate-pulse bg-gray-300 justify-center items-center"
+          >
+          </div>
+        </div>
+        {isDesc && (
+          <div className="desc font-alpha text-[11px] font-semibold  text-slate-700 py-1">
+            
           </div>
         )}
       </div>
